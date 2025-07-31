@@ -2,12 +2,11 @@ workflows:
   build_apk:
     name: Build APK for MTG Library
     environment:
-      flutter: stable
       node: 18.18.0
-      expo: latest
-      vars:
-        EXPO_TOKEN: $EXPO_TOKEN
+    vars:
+      EXPO_TOKEN: $EXPO_TOKEN
     scripts:
+      - npm install -g expo-cli
       - npm install
       - npx expo install
       - npx expo build:android -t apk --non-interactive

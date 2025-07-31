@@ -3,8 +3,8 @@ workflows:
     name: Build APK for MTG Library
     environment:
       node: 18.18.0
-    vars:
-      EXPO_TOKEN: $EXPO_TOKEN
+      vars:
+        EXPO_TOKEN: $EXPO_TOKEN
     scripts:
       - npm install -g expo-cli
       - npm install
